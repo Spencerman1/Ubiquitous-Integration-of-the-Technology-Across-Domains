@@ -1,0 +1,84 @@
+# SSPS IP Stack — Strategic Technology Comparison Map
+
+**Document Scope:** Strategic research map framing comparisons around the functional infrastructure implemented across verticals and substrates against Spencer David Southern's SSPS architecture—including **Mint-to Logic™** (April 15, 2025), **The Shepherd's Method™ / Process** (December 19, 2024), **EDM**, and **RBGA™**—and supporting **ONE**, **AEN-IEN Post-Quantum Secure Environments**, **ValiPass**, **Spendzar**, and the **Cyber Control Center (CCC)** (`W02.5` & `W03`).
+
+---
+
+## 1. Four Analytical Dimensions
+
+| Dimension | What We're Actually Comparing |
+| :--- | :--- |
+| **Technology vertical** | The industry or functional sector: AI, cybersecurity, finance, robotics, telecommunications, etc. |
+| **Operational domain** | The system responsibility: identity, validation, orchestration, execution, lifecycle, continuity or governance |
+| **Substrate** | Where computation or state exists: software, GPU, edge device, network, blockchain, physical machine or hybrid environment |
+| **Ecosystem** | The standards, platforms, protocols, vendors and infrastructure participating in that domain |
+
+---
+
+## 2. The 12 Priority Technology Verticals
+
+1. **Agentic AI and autonomous orchestration** *(Highest priority)*: Agent identity, pre-action validation, tool selection, execution routing, multi-agent coordination, pause/resume, task completion, and trace continuity across ecosystems such as NVIDIA Dynamo/ThunderAgent, NeMo, LangGraph, Google ADK, Microsoft Agent Framework, and OpenAI Agents SDK.
+2. **AI inference, GPU orchestration and accelerated computing** *(Highest priority)*: Request admission, workload dispatch, scheduling, memory residency, cache identity, context continuity, branch pruning, and resource-aware execution across NVIDIA Dynamo, Triton, TensorRT-LLM, vLLM, SGLang, Ray, and Kubernetes inference infrastructure. *(Focus on operational control software—not an assumption that inference tokens are Mint-Units.)*
+3. **Cybersecurity, identity and zero-trust execution** *(Highest priority)*: Credential validation, policy decision points, access restrictions, single-use authorization, revocation, session expiry, and execution evidence across NIST Zero Trust, SPIFFE/SPIRE, OAuth/OIDC, confidential computing, policy-as-code, and workload identity.
+4. **Agentic commerce, machine payments and digital transactions**: Transaction intent, verified reference data, delegated purchasing authority, payment authorization, single-use commitments, fulfillment, and receipt reconciliation across x402, AP2, UCP, ACP, MPP, digital wallets, and tokenized commerce *(relevant to ONE commerce boundary and future Spendzar interoperability)*.
+5. **Robotics, industrial automation and cyber-physical systems**: Machine authorization, sensor validation, simulation-before-actuation, safety interlocks, task routing, equipment state, and physical execution confirmation across ROS 2, NVIDIA Isaac, industrial PLC/SCADA, OPC UA, digital twins, and autonomous equipment.
+6. **Distributed systems, cloud, edge and decentralized networks**: Distributed identity, node enrollment, state synchronization, fault recovery, execution placement, service discovery, and cryptographically verifiable event continuity across Kubernetes, service meshes, edge runtimes, event streaming, distributed ledgers, and peer-to-peer networks.
+7. **Post-quantum security and cryptographic infrastructure**: Identity proof, signed authorization, cryptographic agility, credential lifecycle, key rotation, tamper evidence, and long-term verification across NIST PQC, ML-KEM, ML-DSA, SLH-DSA, hardware security modules, and secure enclaves.
+8. **Blockchain, digital assets and programmable credentials**: Token creation, authorization metadata, restricted transfer, expiry, burning, smart-contract execution, auditability, and state finality across Ethereum standards, ERC-1155, account abstraction, verifiable credentials, smart contracts, and RWA tokenization.
+9. **Simulation, digital twins and computational optimization**: Constraint checking, state-space exploration, pre-execution simulation, divergent-branch reduction, convergence criteria, deterministic replay, and measured resource savings across NVIDIA Omniverse, simulation engines, optimization solvers, digital twins, and quantum-inspired computation *(key for EDM research)*.
+10. **Data provenance, event systems and operational observability**: Event identity, source validation, lineage, immutable or tamper-evident records, lifecycle reconciliation, anomaly detection, and recovery across OpenTelemetry, event sourcing, Kafka, provenance frameworks, and compliance evidence platforms *(directly informs `W02.5` monitoring and verification)*.
+11. **Telecommunications and transport-independent communications**: Node discovery, packet identity, authenticated message routing, offline queues, delivery acknowledgments, session continuity, and transport substitution across 5G/6G, WebRTC, MQTT, mesh networking, publish-subscribe protocols, and secure messaging *(relevant to ONE decentralized communications and Genesis First Contact)*.
+12. **Enterprise governance, compliance and machine-enforceable policy**: Delegated authority, policy enforcement, evidence packaging, authorization boundaries, compliance reconciliation, and operational accountability across policy engines, GRC systems, regulated workflows, software supply-chain attestations, and digital identity infrastructure *(relevant to RBGA™)*.
+
+---
+
+## 3. Six Substrate Classes & Core Control Questions
+
+* **Software:** API calls, application events, files, workflows
+* **Computational:** GPU tensors, memory, compute jobs, inference state
+* **Network:** Packets, sessions, services, distributed nodes
+* **Cryptographic:** Credentials, signed assertions, ledger entries
+* **Physical:** Sensors, actuators, robots, machinery
+* **Hybrid:** Digital twins, edge devices, AI-guided physical processes
+
+**Core Control Questions Across Substrates:**
+* Does the system create a governed unit of operation?
+* How is authority established?
+* What validation precedes execution?
+* How are outcomes routed?
+* How do terminal states behave?
+* Can continuity be independently verified?
+
+---
+
+## 4. Five Priority Investigation Campaigns & Evidence-Backed Function Chart
+
+1. **AI agents and orchestration** *(separating A2A agent communication, MCP tool connectivity, orchestration, transport, and execution authority)*
+2. **NVIDIA's software execution stack** *(Dynamo, ThunderAgent, NeMo, vLLM, and Triton individually and together, distinguishing agent harness from routing/scheduling)*
+3. **Identity and governed access** *(zero-trust architecture, workload identities, short-lived permissions, and historical baselines such as NIST Zero Trust from 2020)*
+4. **Programmable commerce and digital assets** *(authorization, delegated agency, transaction execution, single-use entitlements, and receipt finalization)*
+5. **Physical execution and simulation** *(robotics, autonomous equipment, digital twins, hardware schedulers, and computational optimization for EDM and `W03` simulation)*
+
+| Evidence Field | Required Finding |
+| :--- | :--- |
+| **SSPS reference** | Exact filing, figure, section or dated development artifact |
+| **External product** | Specific version, repository, release or specification |
+| **Input** | What enters the mechanism |
+| **Validation** | What conditions must be satisfied |
+| **State artifact** | What identifiable state is created or maintained |
+| **Routing** | What decision is made and how |
+| **Execution** | What action actually occurs |
+| **Terminal behavior** | What happens on completion, rejection or expiration |
+| **Evidence** | What record independently confirms the outcome |
+| **Chronology** | Earliest verified evidence of the specific function *(distinguishing technical document date, release date, documented implementation date, and demonstrated functional behavior date)* |
+| **Relationship** | Exact, partial, analogous, absent or not yet established |
+
+---
+
+## 5. Priority Ranking for SSPS
+
+* **Priority 1 — Autonomous intelligence and execution control:** Highest combined relevance to Mint-to Logic™ and The Shepherd's Method™
+* **Priority 2 — Governed identity, routing and distributed continuity:** Directly relevant to ONE, ValiPass, and the customer-hosted CCC
+* **Priority 3 — Computational physics, scheduling and simulation:** Important for assessing The Shepherd's Method™ and EDM against computational systems and `W03` simulation
+* **Priority 4 — Security, credentials and post-quantum assurance:** Supports the verification and authorization boundaries of the AEN/IEN environment
+* **Priority 5 — Agentic commerce and programmable transactions:** Downstream interoperability opportunity once underlying control mechanisms are verified

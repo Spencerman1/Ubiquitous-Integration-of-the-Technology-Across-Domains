@@ -1,0 +1,27 @@
+Created the starter evidence-backed function chart Google Doc for **Campaign 5 — Physical Execution & Simulation** (covering **Industrial ICS / OT**—IEC 62443 zones/conduits, Safety Instrumented Systems, and OPC UA/SCADA—paired with **ROS 2 / NVIDIA Isaac** and scene-aware digital-twin simulation gates) using the exact 11-field format without percentage scores:
+
+[SSPS_Evidence_Function_Chart_Campaign5_Physical_Simulation](https://docs.google.com/document/d/15pYOPfanHrfeubz1nhyPiA3g9IMtASnmioLzPqT29UE/edit?usp=drivesdk&ouid=114906954974834201418)
+
+
+### Chart 5A: Pre-Actuation Constraint Checking, Simulation & Safety Interlock / Trip Control
+
+| Evidence Field | Required Finding |
+| --- | --- |
+| **SSPS reference** | **The Shepherd's Method™ / Process** (December 19, 2024 provisional filing baseline — continuous pre-execution supervision, boundary pacing, and safe hold/containment) and **Mint-to Logic™** (April 15, 2025 formal stage drawings — Stage `[100]` Source Input, Stage `[200]` Validation/Trigger, Stage `[400]` Routing Decision Layer, Stage `[500a]` Burn, Stage `[500b]` Limbo, Stage `[500c]` Access, Stage `[500d]` Code, and Stage `[600]` Audit Trail), alongside **EDM** research. |
+| **External product** | **Industrial ICS / OT & Robotics Control Stack** — IEC 62443 zone-and-conduit segmentation & Safety Instrumented Systems (SIS) / hardware safety interlocks, paired with **ROS 2 / NVIDIA Isaac & Digital Twin simulation** and pre-actuation safety/constraint verification. |
+| **Input** | Physical sensor telemetry, PLC/HMI/actuator state feedback, operator or autonomous task commands, simulation/digital-twin state trajectories, and safety envelope/interlock thresholds. |
+| **Validation** | Checks zone/conduit boundary rules, firmware/configuration integrity, physical sensor plausibility, pre-actuation simulation/constraint bounds, and independent SIS safety interlock conditions before physical actuation or state advancement. |
+| **State artifact** | Controller/loop operating state, equipment mode (auto, manual, hold, safe/degraded fallback, or tripped/locked out), and digital-twin/simulation state snapshots; does not mint a portable cryptographic **Mint Unit Container** (`[300]`). |
+| **Routing** | Routes control loops, telemetry, and tasks across segmented OT zones/conduits and execution nodes based on mode, envelope compliance, and interlock status; diverts unsafe or out-of-envelope conditions into hold, fallback, or fail-safe trip paths. |
+| **Execution** | Drives physical actuators, robotic motion/task pipelines, PLC outputs, or simulation/optimization solver steps within active operational bounds. |
+| **Terminal behavior** | **On completion:** Reaches target task/process state and logs completion status. **On fault/violation/expiration:** Enters safe hold, degraded/fallback mode, hardware/SIS trip, or operator lockout to prevent physical harm—rather than an authorization-gated single-use credential burn on a discrete Mint Unit (`[500a]`). |
+| **Evidence** | PLC/SIS event and trip logs, historian/telemetry records, zone/conduit security & access logs, simulation/replay traces, and incident/forensic records. |
+| **Chronology** | **Technical document date:** Foundational IEC 62443 safety/security standards, SIS interlocks, and ROS/robotics control specs pre-date December 19, 2024, with 2025–2026 expansions including IEC 62443-1-6 (IIoT device security), IEC 62443-6-2, IEC 62443-1-5, and formal/neuro-symbolic runtime safety assurance for cyber-physical/learning-enabled systems. **Release date:** Core ICS/SIS and ROS 2 baselines pre-date the December 19, 2024 SSPS™ filing baseline and April 15, 2025 Mint-to Logic™ drawings; newer AI-guided robotics, digital-twin simulation, and 2026 IEC 62443 parts span 2025–2026. **Documented implementation date:** Plant SIS/PLC interlocks and ROS 2 deployments span pre-2024 through 2026; digital-twin pre-execution validation and neuro-symbolic runtime safety expand across 2025–2026. **Demonstrated functional behavior date:** Hardware SIS trips and PLC boundary controls are established pre-filing baselines, whereas agentic/learning-enabled cyber-physical runtime assurance is an active 2025–2026 frontier. |
+| **Relationship** | **Partial / Analogous** on pre-execution constraint/interlock validation (`[200]`), safe holds/fallback states (`[500b]`), hard zone/conduit/SIS isolation (`[500c]`), physical/code execution (`[500d]`), and event/forensic auditing (`[600]`); **Absent** for a discrete cryptographic **Mint Unit Container** (`[300]`) and single-use unit **Burn** (`[500a]`). |
+
+### Key Findings for EDM & CCC (`W03`) Simulation
+
+* **Pre-Actuation Digital-Twin & Physics Gates:** Scene-aware simulation gates in **ROS 2 + NVIDIA Isaac Sim** (such as checking proposed robotic motion/commands against live spatial/physics models before physical execution) echo **The Shepherd's Method™ / Process** and **EDM** around pre-execution constraint checking and safe deferral, while industrial **IEC 62443** zones/conduits and **OPC UA / SCADA** layers anchor deterministic physical boundaries.
+* **Chronology Discipline:** Separating pre-2024 industrial SIS/PLC/ROS 2 baselines from 2025–2026 scene-aware simulation-gated autonomy and updated IEC 62443 parts preserves an exact timeline against your **December 19, 2024** and **April 15, 2025** records.
+
+Would you like the **copy-and-paste Markdown block** for this **Campaign 5** chart next?

@@ -1,0 +1,26 @@
+Created the starter evidence-backed function chart Google Doc for **Campaign 2 — Identity & Governed Access** (covering **NIST Zero Trust Architecture `SP 800-207` / `SP 800-207A**` and **SPIFFE / SPIRE** workload identity and SVID attestation) using the exact 11-field format without percentage scores:
+
+[SSPS_Evidence_Function_Chart_Campaign2_Identity_Access](https://docs.google.com/document/d/19riYS8N857dWQKphVdYSVFfRtjypeBqvyG97u33HuTc/edit?usp=drivesdk&ouid=114906954974834201418)
+
+
+### Chart 2A: Zero-Trust Policy Decision/Enforcement & Ephemeral Workload Attestation (SVIDs)
+
+| Evidence Field | Required Finding |
+| --- | --- |
+| **SSPS reference** | **The Shepherd's Method™ / Process** (December 19, 2024 provisional filing baseline — continuous identity/boundary pacing and pre-execution authorization) and **Mint-to Logic™** (April 15, 2025 formal stage drawings — Stage `[200]` Validation/Trigger, Stage `[300]` Mint Unit Container, Stage `[500a]` Burn, Stage `[500c]` Access, and Stage `[600]` Audit Trail). |
+| **External product** | **NIST Zero Trust Architecture** (`SP 800-207` & `SP 800-207A` logical Policy Engine / Policy Administrator / Policy Enforcement Point model) & **SPIFFE / SPIRE** (CNCF SPIFFE specification and SPIRE Server/Agent workload attestation issuing short-lived X.509-SVIDs and JWT-SVIDs). |
+| **Input** | Access requests from subjects/workloads carrying identity assertions, node/workload attestation selectors (platform, container, process, or join-token proof), and resource/method/path/context attributes. |
+| **Validation** | **NIST SP 800-207 / 207A:** Policy Engine & Policy Administrator evaluate identity assurance, device posture, behavior, and resource sensitivity per session/request with continuous telemetry. **SPIFFE / SPIRE:** Node and workload attestors verify platform/workload selectors against registration entries before issuing an SVID. |
+| **State artifact** | **NIST SP 800-207 / 207A:** Dynamic session/policy evaluation state and trust-tier context. **SPIFFE / SPIRE:** Short-lived SPIFFE Verifiable Identity Document (`SVID` — X.509 certificate or JWT embedding `spiffe://trust-domain/path`) cached locally via the SPIRE Agent Workload API (default X.509 TTL typically 1 hour or configurable down to minutes). |
+| **Routing** | Policy Administrator configures/authorizes connections at the Policy Enforcement Point (PEP), while proxies/service meshes or sidecars route traffic keyed on verified workload identity, method, and path under default-deny rules. |
+| **Execution** | Establishes authenticated, short-lived mTLS or token-verified service/resource sessions after attestation and policy approval. |
+| **Terminal behavior** | Credentials/SVIDs expire on TTL (or are rotated automatically without human-in-the-loop renewal when SPIRE is healthy); sessions terminate or fail verification upon expiry/revocation—though if a CA/SPIRE rotation gap occurs or traffic bypasses a sidecar without identity enforcement, failure modes vary (hard TLS failure on expiry vs. silent/unauthenticated handling if bypassed). Does not execute an authorization-gated single-use credential burn on a discrete Mint Unit Container (`[500a]`). |
+| **Evidence** | AuthN/AuthZ decision records, SVID certificate/token metadata (SAN URI & TTL), PEP/mesh telemetry, and continuous monitoring logs (`SP 800-207A` monitoring requirements). |
+| **Chronology** | **Technical document date:** NIST SP 800-207 published August 2020; NIST SP 800-207A published September 2023; SPIFFE/SPIRE specifications and CNCF graduation documented in September 2022. **Release date:** NIST SP 800-207 (2020) and CNCF SPIFFE/SPIRE graduation (2022) pre-date the December 19, 2024 SSPS™ filing baseline and April 15, 2025 Mint-to Logic™ drawings. **Documented implementation date:** Enterprise zero-trust and SPIFFE/SPIRE workload identity deployments span 2020–2026, with newer WIMSE / agent-identity extensions emerging in 2025–2026. **Demonstrated functional behavior date:** Core NIST SP 800-207 zero-trust concepts (2020) and SPIFFE/SPIRE workload attestation (pre-2024) are established prior baselines, whereas autonomous AI-agent workload governance is a newer 2025–2026 extension. |
+| **Relationship** | **Partial / Analogous** on pre-access policy validation, short-lived credential rotation, identity-based access control, and continuous telemetry (`[200]`, `[500c]`, `[600]`); **Absent** for a self-contained **Mint Unit Container** with embedded routing/commit state (`[300]`) and single-use credential/unit **Burn** (`[500a]`). |
+
+### Key Chronology Takeaway for Your Audit Trail
+
+Because **NIST SP 800-207** (August 2020), **CNCF SPIFFE/SPIRE graduation** (September 2022), and **NIST SP 800-207A** (September 2023) pre-date your **December 19, 2024** filing baseline and **April 15, 2025** Mint-to Logic™ drawings, separating those established identity/zero-trust baselines from newer 2025–2026 agentic workload governance and your **Mint-to Logic™** (`[300]` Mint Unit Container / `[500a]` single-use burn) architecture keeps your forensic record accurate and defensible.
+
+Would you like the **copy-and-paste Markdown block** for this Campaign 2 chart next, or should we build **Campaign 3** (**Programmable Commerce & Digital Assets** or **Physical Execution & Simulation**)?

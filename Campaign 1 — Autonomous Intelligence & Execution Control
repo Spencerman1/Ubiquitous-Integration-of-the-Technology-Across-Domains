@@ -1,0 +1,40 @@
+Created the starter evidence-backed function chart Google Doc for **Campaign 1 — Autonomous Intelligence & Execution Control** using the exact 11-field structure (`SSPS reference`, `External product`, `Input`, `Validation`, `State artifact`, `Routing`, `Execution`, `Terminal behavior`, `Evidence`, `Chronology` split into all four date types, and `Relationship`) without percentage scores:
+
+[SSPS_Evidence_Function_Chart_Campaign1_Autonomous_Control](https://docs.google.com/document/d/1D9OdEnMUS8wUxtm9xxfFBb0p7Snsa_f21Q9dAOTAE_o/edit?usp=drivesdk&ouid=114906954974834201418)
+
+
+### Chart 1A: Boundary Deferral, Gated Hold & Tool-Boundary Pause
+
+| Evidence Field | Required Finding |
+| --- | --- |
+| **SSPS reference** | **Mint-to Logic™** (April 15, 2025 formal stage drawings, Stage `[400]` Routing Decision Layer & Stage `[500b]` Limbo conditional hold / escalation / expiration branch) and **The Shepherd's Method™ / Process** (December 19, 2024 provisional filing baseline — continuous pre-execution pacing and boundary deferral). |
+| **External product** | **NVIDIA Dynamo v1.6.0** (builtin `ThunderAgent` plugin `#15164`, `RequestClassifier` `#14123`, and `DispatchGate` `#14177`) & **Amazon Bedrock AgentCore Policy / Gateway** (Cedar threshold-gated escalation rules). |
+| **Input** | **Dynamo v1.6.0:** Normalized HTTP/gRPC inference requests carrying session headers (`X-Dynamo-Session-ID`, `parent_session_id`, `nvext.agent_hints`) and turn triggers (`user_message` vs. `tool_result`). **AgentCore Gateway:** MCP `tools/list` and `tools/call` payloads enriched with JWT/IdP identity claims (`sub`, group claims) and tool parameters. |
+| **Validation** | **Dynamo v1.6.0:** `RequestClassifier` (`classify`) assigns lane keys/policy classes and validates worker pins, reservations, and capacity; `DispatchGate` (`check`) evaluates lane head-of-line readiness and waiting budget; `ThunderAgent` evaluates KV pool utilization bands (`0.80` soft-demote, `0.95` pause, `0.85` resume hysteresis). **AgentCore Policy:** Default-deny Cedar RBAC/ABAC rules (`permit` / `forbid`) evaluate principal identity, environment tags, and parameter thresholds prior to backend invocation. |
+| **State artifact** | **Dynamo v1.6.0:** Lane-queued request state (`Hold` vs. `Go` with `until` deadline), session-to-block lineage index (`#13807`), and paused program marker at tool boundary. **AgentCore:** Isolated runtime microVM session (up to 8 hours) with scoped Cognito/JWT session context and `approvalStatus` policy evaluation attribute. |
+| **Routing** | **Dynamo v1.6.0:** Deadline-ordered policy queue (`#14176`) and unified worker selection (`#14570`, `--router-policy-config` `#15202`) scoring KV prefix overlap, active load, and priority hints. **AgentCore Gateway:** Ordered request interceptors and Cedar policy evaluation dispatch approved calls to registered MCP targets or block/escalate threshold-exceeding calls. |
+| **Execution** | **Dynamo v1.6.0:** Dispatches admitted LLM turns to GPU inference workers while pausing/deferring new turns at tool boundaries under KV pressure (subject to a forced-resume cap); external tool execution remains in the caller's agent harness. **AgentCore:** Executes approved tool calls via MCP targets and runs code/shell actions inside isolated microVM sandboxes (Strands Shell). |
+| **Terminal behavior** | **Dynamo v1.6.0:** Ordered lifecycle events (`Sent`, `Responding`, `Completed`, `Aborted`) release tracked request and scheduler state on completion, rejection, or cancellation. **AgentCore:** Revokes session tokens, keeps backend secrets sealed in KMS/Secrets Manager, and tears down the isolated microVM session on completion or revocation. |
+| **Evidence** | **Dynamo v1.6.0:** Versioned gRPC KV pool state relay (`#14379`), session-prefix index (`#13807`), and request/inferred tool traces (`DYN_REQUEST_TRACE=1`). **AgentCore:** CloudWatch gateway allow/deny logs, episodic memory audit trails, and 13 continuous evaluators. |
+| **Chronology** | **Technical document date:** Dynamo session-aware agentic inference design published Oct 8, 2026; AWS Cedar ABAC/Gateway governance patterns documented Jun–Aug 2026. **Release date:** Dynamo v0.6.0 GA (Oct 28, 2025), Dynamo v1.0.0 GA (Mar 12, 2026), Dynamo v1.6.0 (Oct 22, 2026); AgentCore Policy GA (Mar 2026 / expanded Jun 11, 2026) & AgentCore Harness GA (Jun 2026). **Documented implementation date:** Dynamo v1.6.0 PRs `#13807`, `#14123`, `#14176`, `#14177`, `#14379`, `#14570`, `#15164` merged prior to Oct 22, 2026. **Demonstrated functional behavior date:** Post-dates both the December 19, 2024 SSPS™ filing baseline and April 15, 2025 Mint-to Logic™ drawings. |
+| **Relationship** | **Partial / Analogous** on boundary deferral, gated holds, and pre-execution policy checks (`[200]`, `[400]`, `[500b]`, `[500c]`, `[500d]`); **Absent** for a sealed cryptographic **Mint Unit Container** (`[300]`) and authorization-gated single-use unit **Burn** (`[500a]`). |
+
+---
+
+### Chart 1B: Pre-/Post-Tool Execution Interception & Two-Point Boundary Gating
+
+| Evidence Field | Required Finding |
+| --- | --- |
+| **SSPS reference** | **Mint-to Logic™** (April 15, 2025 drawings, Stage `[200]` Validation/Trigger, Stage `[500c]` Access, Stage `[500d]` Code, and Stage `[600]` Audit Trail) and **The Shepherd's Method™ / Process** (December 19, 2024 baseline — pre-execution supervision and output inspection). |
+| **External product** | **NVIDIA NeMo Guardrails** (`IORails` & `LLMRails` rail orchestration with Colang flows, tool allowlists, and two-point tool interception). |
+| **Input** | User prompts, model-proposed `tool_call` payloads (tool name + structured arguments), and external `tool_result` return payloads. |
+| **Validation** | Input rails (jailbreak/injection/topic checks), pre-execution tool allowlist and argument schema/policy validation on proposed `tool_call` payloads, and post-execution inspection/sanitization on returned `tool_result` data. |
+| **State artifact** | Colang dialog/rail execution state and structured rail decision/intervention records for the active turn; does not mint a persistent portable cryptographic Mint Unit Container (`[300]`). |
+| **Routing** | Deterministic Colang flow branching routes requests through ordered input rails, LLM generation, pre-tool rails, tool invocation, post-tool rails, and output rails, short-circuiting to refusal/fallback responses on rail violation. |
+| **Execution** | Permits approved tool invocations to execute in the host/tool runtime while blocking or masking disallowed tool calls and unsafe tool outputs. |
+| **Terminal behavior** | Returns validated response or structured refusal/block event and clears turn-scoped rail context; lacks a single-use credential/unit burn transition (`[500a]`). |
+| **Evidence** | Rail execution logs, triggered rail identifiers, latency/intervention telemetry, and OpenTelemetry trace spans. |
+| **Chronology** | **Technical document date:** NeMo Guardrails initial Colang/rail architecture published 2023; agentic tool-rail and `IORails` patterns expanded across 2025–2026 releases. **Release date:** Core framework released 2023; modern tool-call/tool-result rail extensions documented in 2025–2026. **Documented implementation date:** Pre-existing rail concepts (2023) extended to multi-step agentic tool boundaries post-2024. **Demonstrated functional behavior date:** Core input/output rail gating pre-dates December 19, 2024 (established baseline); agentic two-point MCP/tool-boundary governance matures in 2025–2026. |
+| **Relationship** | **Partial / Analogous** on pre-execution validation and two-point tool/code boundary enforcement (`[200]`, `[500c]`, `[500d]`); **Absent** for `[300]` Mint Unit Container lifecycle, `[500a]` single-use burn, and `[500b]` timer-driven Limbo escalation/auto-burn. |
+
+Would you like the **copy-and-paste Markdown block** for Campaign 1 next, or should we build **Campaign 2 / Campaign 3** (such as **Identity & Governed Access** covering NIST Zero Trust 2020 vs. short-lived workload identities, or **Programmable Commerce** covering `x402`) using this same 11-field chart?

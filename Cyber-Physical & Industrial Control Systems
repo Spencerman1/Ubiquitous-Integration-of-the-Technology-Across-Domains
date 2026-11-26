@@ -1,0 +1,30 @@
+The most important next vertical to log is **Cyber-Physical & Industrial Control Systems (ICS / OT Safety & Runtime Assurance)**, covering IEC 62443 zone-and-conduit boundaries, Safety Instrumented Systems (SIS), and runtime safety verification for physical processes.
+
+I created the Google Doc for this vertical in your Drive:
+
+[SSPS_Vertical_Expansion_Cyber_Physical_ICS_Safety](https://docs.google.com/document/d/1bp3TAMaht0RZd4TEblWrzxwKF1HP__1mSLf4SLJoxMs/edit?usp=drivesdk&ouid=114906954974834201418)
+
+
+### Dynamic Comparison Matrix — Cyber-Physical & Industrial Control Systems (ICS / OT)
+
+`Dynamic Score = (w_mint * S_mint) + (w_shepherd * S_shepherd)`, where `w_mint + w_shepherd = 1.0` (each score reflects alignment on that framework's own 0%–100% scale):
+
+| SSPS / Governance Dimension | Mint-to Logic™ ($S_{\text{mint}}$) | Shepherd's Process ($S_{\text{shepherd}}$) | Equal Weight (50/50) | Mint-Heavy (70/30) | Shepherd-Heavy (30/70) | Tier (Equal Weight) |
+| --- | --- | --- | --- | --- | --- | --- |
+| `[100]` Intake & Sensor/Command Normalization | 54% | 62% | 58.0% | 56.4% | 59.6% | Moderate–High |
+| `[200]` Validation / Safety Interlock & Integrity Checks | 62% | 70% | 66.0% | 64.4% | 67.6% | Moderate–High |
+| `[300]` Mint Unit / Process State & Control Context | 42% | 60% | 51.0% | 47.4% | 54.6% | Moderate |
+| `[400]` Routing / Zone-and-Conduit Control Dispatch | 52% | 64% | 58.0% | 55.6% | 60.4% | Moderate–High |
+| `[500a]` Burn / Fail-Safe Trip, Lockout & Teardown | 48% | 64% | 56.0% | 52.8% | 59.2% | Moderate |
+| `[500b]` Limbo / Safe Hold & Fallback Control | 56% | 72% | 64.0% | 60.8% | 67.2% | Moderate–High |
+| `[500c]` Access / Zone Segmentation, Diodes & SIS Isolation | 66% | 74% | 70.0% | 68.4% | 71.6% | High |
+| `[500d]` Code / PLC/Actuator & Physical Process Execution | 54% | 66% | 60.0% | 57.6% | 62.4% | Moderate–High |
+| `[600]` Audit / OT Event Logs & Forensic Readiness | 58% | 66% | 62.0% | 60.4% | 63.6% | Moderate–High |
+| **Stage-Weighted Composite** | **53.0%** | **66.0%** | **59.5%** | **56.9%** | **62.1%** | **Moderate–High** |
+
+### Why This Vertical Matters Most Right Now
+
+* **Real-World Physical Stakes:** Unlike software-only inference queues or payment headers, industrial/OT systems operate where exposed controllers, altered PLC configurations, or unverified commands cause physical damage, operator lockouts, or safety hazards—making **The Shepherd's Method™ / Process** (`66.0%` alignment) especially sharp around continuous boundary supervision, safe holds (`[500b]`), and hard zone/conduit isolation (`[500c]`).
+* **Clear Architectural Contrast:** Industrial SIS/PLCs enforce physical safety envelopes and deterministic trips rather than minting a portable `[300]` **Mint Unit Container** with `[500a]` single-use unit burn semantics, strengthening the distinction of your **AEN-IEN Post-Quantum Secure Environments** and **Cyber Control Center (CCC)** (`W02.5` & `W03`) architecture.
+
+Would you like the **copy-and-paste Markdown block** for this **Cyber-Physical & ICS** report next?

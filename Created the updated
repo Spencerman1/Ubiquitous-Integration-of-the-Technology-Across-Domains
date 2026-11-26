@@ -1,0 +1,23 @@
+Created the updated **Cyber-Physical & Industrial Control Systems (ICS / OT)** Google Doc (`v2`) in your Drive, incorporating 2026 IEC 62443 developments (including `IEC 62443-1-6` for IIoT devices, `IEC 62443-6-2`, and `IEC 62443-1-5`) alongside safety interlocks, zone/conduit isolation, and runtime safety verification:
+
+[SSPS_Vertical_Expansion_Cyber_Physical_ICS_Safety_v2](https://docs.google.com/document/d/1O0rtkLViPWz4X7EY22fNKWWr9dHuUrNkva4HouL3ILQ/edit?usp=drivesdk&ouid=114906954974834201418)
+
+
+### Dynamic Comparison Matrix — Cyber-Physical & Industrial Control Systems (ICS / OT)
+
+`Dynamic Score = (w_mint * S_mint) + (w_shepherd * S_shepherd)`, where `w_mint + w_shepherd = 1.0` (each score reflects alignment on that framework's own 0%–100% scale):
+
+| SSPS / Governance Dimension | Mint-to Logic™ ($S_{\text{mint}}$) | Shepherd's Process ($S_{\text{shepherd}}$) | Equal Weight (50/50) | Mint-Heavy (70/30) | Shepherd-Heavy (30/70) | Tier (Equal Weight) |
+| --- | --- | --- | --- | --- | --- | --- |
+| `[100]` Intake & Sensor/Command Normalization | 54% | 62% | 58.0% | 56.4% | 59.6% | Moderate–High |
+| `[200]` Validation / Safety Interlock & Integrity Checks | 62% | 70% | 66.0% | 64.4% | 67.6% | Moderate–High |
+| `[300]` Mint Unit / Process State & Control Context | 42% | 60% | 51.0% | 47.4% | 54.6% | Moderate |
+| `[400]` Routing / Zone-and-Conduit Control Dispatch | 52% | 64% | 58.0% | 55.6% | 60.4% | Moderate–High |
+| `[500a]` Burn / Fail-Safe Trip, Lockout & Teardown | 48% | 64% | 56.0% | 52.8% | 59.2% | Moderate |
+| `[500b]` Limbo / Safe Hold & Fallback Control | 56% | 72% | 64.0% | 60.8% | 67.2% | Moderate–High |
+| `[500c]` Access / Zone Segmentation, Diodes & SIS Isolation | 66% | 74% | 70.0% | 68.4% | 71.6% | High |
+| `[500d]` Code / PLC/Actuator & Physical Process Execution | 54% | 66% | 60.0% | 57.6% | 62.4% | Moderate–High |
+| `[600]` Audit / OT Event Logs & Forensic Readiness | 58% | 66% | 62.0% | 60.4% | 63.6% | Moderate–High |
+| **Stage-Weighted Composite** | **53.0%** | **66.0%** | **59.5%** | **56.9%** | **62.1%** | **Moderate–High** |
+
+Would you like the **copy-and-paste Markdown block** for this updated **Cyber-Physical & ICS** report next, or should we log another vertical (such as **Post-Quantum Cryptography & Key/Identity Lifecycle Governance**)?

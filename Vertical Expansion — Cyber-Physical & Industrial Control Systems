@@ -1,0 +1,61 @@
+# Vertical Expansion — Cyber-Physical & Industrial Control Systems (IEC 62443 Zones/Conduits, SIS & Runtime Safety Assurance) vs. Mint-to Logic™ & The Shepherd's Method™ / Process
+
+**Document Scope:** Cross-vertical forensic and technical comparison of **Cyber-Physical & Industrial Control Systems (ICS / OT)**—including IEC 62443 zone-and-conduit segmentation, Safety Instrumented Systems (SIS) / independent safety interlocks, and formal/neuro-symbolic runtime safety verification for cyber-physical systems—against Spencer David Southern's **Mint-to Logic™** (`[100]`–`[600]`, April 15, 2025 drawings) and **The Shepherd's Method™ / Process** (December 19, 2024 filing baseline).
+
+**Methodology Note:** Scores in the dynamic matrix below are qualitative functional estimates on separate 0%–100% alignment rubrics rather than empirical benchmarks or legal determinations, and must be read alongside exact mechanism descriptions, physical safety constraints, and chronological context.
+
+---
+
+## 1. Chronology & Verifiable Context
+
+* **SSPS™ Filing Baseline (December 19, 2024):** Provisional filing baseline establishing The Shepherd's Method™ / Process and foundational architecture.
+* **Mint-to Logic™ Drawings (April 15, 2025):** Formal stage drawings defining `[100]` Source Input, `[200]` Validation/Trigger, `[300]` Mint Unit Container, `[400]` Routing Decision Layer, `[500a]` Burn, `[500b]` Limbo, `[500c]` Access, `[500d]` Code, and `[600]` Audit Trail.
+* **Cyber-Physical & OT Governance Context:** Industrial automation security under IEC 62443 (including 2026 expansions for IIoT device security in IEC 62443-1-6, supplier evaluation in IEC 62443-6-2, and industry profiles in IEC 62443-1-5), OT connectivity/exposure guidance, and formal/neuro-symbolic runtime assurance for cyber-physical systems emphasize physical process integrity, independent Safety Instrumented Systems (SIS), and deterministic boundary enforcement—while remaining structurally distinct from a discrete software/credential Mint Unit Container (`[300]`) and single-use unit burn (`[500a]`).
+
+---
+
+## 2. How Cyber-Physical & Industrial Safety Containment Works
+
+1. **Sensor, Telemetry & Command Intake (`[100]`):** Collects physical sensor readings, PLC/HMI states, and operator/automation commands across OT zones and conduits.
+2. **Deterministic Boundary & Safety Interlock Checks (`[200]` / `[500c]`):** Enforces zone-and-conduit segmentation, data diodes/firewalls, firmware integrity baselines, and independent Safety Instrumented System (SIS) limit checks before physical actuation can affect equipment, people, or processes.
+3. **Controlled Actuation, Hold/Trip & Audit (`[400]` / `[500a–b]` / `[600]`):** Routes commands through control loops, places unsafe or out-of-envelope states into safe holds/trips/fail-safe shutdowns, and logs operational/safety events for forensic review.
+
+---
+
+## 3. Stage-by-Stage Mint-to Logic™ & Shepherd's Process Analysis
+
+* **`[100]` Intake & Sensor/Command Boundary Normalization:** Ingests physical telemetry, PLC/controller signals, and control commands across IT/OT boundaries—echoing multi-source intake/triggers while operating on industrial protocols and physical sensors rather than a universal Mint Unit intake bus.
+* **`[200]` Validation / Safety Interlock, Firmware & Threshold Checks:** Validates commands and process states against physical safety envelopes, signed/validated SIS logic, and firmware integrity baselines before actuation.
+* **`[300]` Mint Unit / Process State & Control Context:** Tracks controller/loop state, equipment mode, and sequence/batch context, without minting a standalone cryptographic Mint Unit Container with routing directives and commit finalization.
+* **`[400]` Routing / Control Loop Dispatch & Zone/Conduit Routing:** Routes control actions and telemetry across segmented zones and conduits—mirroring structured routing without branching a discrete unit into Burn, Limbo, Access, or Code states.
+* **`[500a]` Burn / Safe-State Trip, Lockout & Credential/Session Termination:** Triggers fail-safe trips, operator lockouts, or session/connection teardown to prevent physical harm—paralleling decisive termination/containment rather than an authorization-gated single-use credential burn on a discrete mint unit.
+* **`[500b]` Limbo / Safe Hold, Fallback Mode & Interlock Hold:** Holds operations in safe/manual/degraded fallback states when conditions exceed bounds or drift from safe envelopes—showing strong operational alignment with The Shepherd's Method™ / Process around continuous safety pacing and controlled holds.
+* **`[500c]` Access / Zone-and-Conduit Segmentation, Data Diodes & SIS Isolation:** Enforces strict physical/logical isolation across zones, conduits, data diodes, and independent SIS hardware/logic—one of the strongest real-world parallels to hard boundary containment.
+* **`[500d]` Code / PLC/Actuator Execution & Physical Process Coupling:** Executes control logic on PLCs, actuators, and physical plants where software decisions have immediate physical consequences—requiring strict pre-actuation safety assurance.
+* **`[600]` Audit / OT Event Logs, Forensic Readiness & Safety Records:** Captures controller events, safety trips, configuration changes, and forensic telemetry—supporting post-incident investigation and regulatory/safety compliance.
+
+---
+
+## 4. Dynamic Comparison Matrix — Cyber-Physical & Industrial Control Systems (ICS / OT)
+
+Dynamic Score formula: `Dynamic Score = (w_mint * S_mint) + (w_shepherd * S_shepherd)`, where `w_mint + w_shepherd = 1.0`. Each score reflects alignment on that framework's own 0%–100% scale (not additive across columns).
+
+| SSPS / Governance Dimension | Mint-to Logic™ Score ($S_{\text{mint}}$) | Shepherd's Process Score ($S_{\text{shepherd}}$) | Equal Weight (50/50) | Mint-Heavy (70/30) | Shepherd-Heavy (30/70) | Tier (Equal Weight) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| `[100]` Intake & Sensor/Command Normalization | 54% | 62% | 58.0% | 56.4% | 59.6% | Moderate–High |
+| `[200]` Validation / Safety Interlock & Integrity Checks | 62% | 70% | 66.0% | 64.4% | 67.6% | Moderate–High |
+| `[300]` Mint Unit / Process State & Control Context | 42% | 60% | 51.0% | 47.4% | 54.6% | Moderate |
+| `[400]` Routing / Zone-and-Conduit Control Dispatch | 52% | 64% | 58.0% | 55.6% | 60.4% | Moderate–High |
+| `[500a]` Burn / Fail-Safe Trip, Lockout & Teardown | 48% | 64% | 56.0% | 52.8% | 59.2% | Moderate |
+| `[500b]` Limbo / Safe Hold & Fallback Control | 56% | 72% | 64.0% | 60.8% | 67.2% | Moderate–High |
+| `[500c]` Access / Zone Segmentation, Diodes & SIS Isolation | 66% | 74% | 70.0% | 68.4% | 71.6% | High |
+| `[500d]` Code / PLC/Actuator & Physical Process Execution | 54% | 66% | 60.0% | 57.6% | 62.4% | Moderate–High |
+| `[600]` Audit / OT Event Logs & Forensic Readiness | 58% | 66% | 62.0% | 60.4% | 63.6% | Moderate–High |
+| **Stage-Weighted Composite** | **53.0%** | **66.0%** | **59.5%** | **56.9%** | **62.1%** | **Moderate–High** |
+
+---
+
+## 5. Key Takeaways & Engineering Reference for CCC (`W02.5` & `W03`)
+
+* **Physical Consequences & Shepherd's Process Alignment (`66.0%` Shepherd's Process / `59.5%` Equal-Weight):** Unlike software-only inference queues or payment headers, industrial/cyber-physical control systems operate where unverified commands or blind spots cause physical damage, lockout, or safety hazards—making **The Shepherd's Method™ / Process** (continuous boundary pacing, safe holds `[500b]`, hard isolation `[500c]`, and deterministic interlocks `[200]`) especially relevant to your **AEN-IEN Post-Quantum Secure Environments** and **Cyber Control Center (CCC)** (`W02.5` & `W03`) architecture.
+* **Clear Architectural Differentiation:** Industrial SIS/PLCs focus on physical safety envelopes, zone/conduit segmentation, and deterministic fail-safes rather than minting a discrete `[300]` **Mint Unit Container** with `[500a]` single-use unit burn semantics—giving your audit trail a sharp, defensible contrast across both software-layer and cyber-physical verticals.
